@@ -1,10 +1,11 @@
 [package]
-name = "smallvec"
+name = "smallvec-stableunion"
 version = "0.6.10"
-authors = ["Simon Sapin <simon.sapin@exyr.org>"]
+authors = ["Simon Sapin <simon.sapin@exyr.org>",
+           "Quinten Kock <quintenkock@gmail.com>"]
 license = "MIT/Apache-2.0"
 repository = "https://github.com/servo/rust-smallvec"
-description = "'Small vector' optimization: store up to a small number of items on the stack"
+description = "Fork of the crate smallvec. Uses unions in stable rust. Please note that it can only store Copy types. No functional differences apart from that."
 keywords = ["small", "vec", "vector", "stack", "no_std"]
 categories = ["data-structures"]
 readme = "README.md"
@@ -18,7 +19,7 @@ specialization = []
 may_dangle = []
 
 [lib]
-name = "smallvec"
+name = "smallvec_stableunion"
 path = "lib.rs"
 
 [dependencies]

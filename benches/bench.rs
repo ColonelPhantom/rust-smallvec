@@ -1,11 +1,11 @@
 #![feature(test)]
 
 #[macro_use]
-extern crate smallvec;
+extern crate smallvec_stableunion;
 extern crate test;
 
 use self::test::Bencher;
-use smallvec::{ExtendFromSlice, SmallVec};
+use smallvec_stableunion::{ExtendFromSlice, SmallVec};
 
 const VEC_SIZE: usize = 16;
 const SPILLED_SIZE: usize = 100;
